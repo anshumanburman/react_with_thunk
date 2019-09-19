@@ -18,14 +18,14 @@ let increaseCount = (e)=>{
         <h3>hii{count}</h3>
         </div>
    </nav> */}
-    <nav class="navbar navbar-expand-lg navbar-light" style={{ zIndex: "9" }}>
+    <nav className="navbar navbar-expand-lg navbar-light" style={{ zIndex: "9" }}>
     <div className="container">
     <div
-            class="card shadow "
-            style={{ marginTop: "-12px", border: "none" }}
+            className="card shadow "
+            style={{ marginTop: "2px", border: "none" }}
           >
-              <div class="card-body" style={{ padding: "1rem" }}>
-              <Link to="/" class="navbar-brand">
+              <div className="card-body" style={{ padding: "1rem" }}>
+              <Link to="/" className="navbar-brand">
                 <img
                   src={require("../../img/logo.png")}
                   width="150"
