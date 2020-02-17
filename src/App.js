@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import './App.css';
-import {BrowserRouter, Link, Switch, Route} from "react-router-dom";
+import {BrowserRouter, Link, Switch, Route,Router,Redirect} from "react-router-dom";
+import { createBrowserHistory } from "history";
 import {SaralContext} from './Context';
 import { Provider } from 'react-redux';
 import configureStore from './ConfigStore';
@@ -13,7 +14,7 @@ import Login from './components/screens/Login';
 
 
 const store = configureStore();
-
+const hist = createBrowserHistory();
 
 
 
@@ -24,12 +25,15 @@ function App() {
     <Fragment>
     <Online>
     <Provider store={store}>
-      <BrowserRouter>
+      
+      <Router history={hist}>
       <Switch>
-        {/* <Route exact path="/" component={Home} /> */}
-        <Route exact path="/" component={Login} />
+        {/* <Route exact path="/login" component={Home} /> */}
+        <Route exact path="/login" component={Login} />
+        <Route path="/home" component={Home} />
+        <Redirect from="/" to={"/login"} />
       </Switch>
-      </BrowserRouter>
+      </Router>
       </Provider>
       </Online>
       <Offline>

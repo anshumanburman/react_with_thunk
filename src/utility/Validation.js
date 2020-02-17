@@ -17,3 +17,14 @@ export function IsMobileNumber(txtMobId) {
     }
     return true;
 }
+
+export function isValidLogin(login, password) {
+    if (login==='') {
+        alert("Login can not be blank.");
+        return false
+    } else if(password==='') {
+        alert("password can not be blank.")
+        return false
+    }
+    return true
+}
