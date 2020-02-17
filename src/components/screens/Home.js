@@ -1,5 +1,6 @@
 import React,{useState, useEffect} from 'react';
 import NavBar from './navBar';
+import Login from './Login';
 
 const Home = () => {
     const [width, setWidth] = useState(window.innerWidth);
@@ -16,7 +17,8 @@ const Home = () => {
       setWidth(window.innerWidth);
     };
     return (
-     <NavBar/>
+    //  <NavBar/>
+    <Login />
   );
 }
 
