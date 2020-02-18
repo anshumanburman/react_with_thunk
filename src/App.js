@@ -26,14 +26,14 @@ function App() {
     <Online>
     <Provider store={store}>
       
-      <Router history={hist}>
+    <BrowserRouter>
       <Switch>
         {/* <Route exact path="/login" component={Home} /> */}
         <Route exact path="/login" component={Login} />
         <Route path="/home" component={Home} />
         <Redirect from="/" to={"/login"} />
       </Switch>
-      </Router>
+      </BrowserRouter>
       </Provider>
       </Online>
       <Offline>

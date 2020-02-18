@@ -4,10 +4,15 @@ export const API_CALL_FAILURE = "API_CALL_FAILURE";
 
 const BASE_URL = 'https://swapi.co/api/'
 
-//GET PEOPLE 
+//GET PEOPLE planets
 export const PEOPLE_LIST_METHOD  = BASE_URL + 'people';
 export const PEOPLE_LIST_SUCCESS = "people_list_success";
 export const PEOPLE_LIST_FAILURE = "people_list_failure";
+
+//GET PLANETS
+export const PLANETS_LIST_METHOD  = BASE_URL + 'planets';
+export const PLANETS_LIST_SUCCESS = "planets_list_success";
+export const PLANETS_LIST_FAILURE = "planets_list_failure";
 
 //LOGIN API KEY
 export const LOGIN_METHOD = BASE_URL + 'article/login';

@@ -38,7 +38,8 @@ const Login = ({history}) => {
             const element = peopleListArray[index];
             
             if (element.name === loginInput && element.birth_year === passwordInput) {
-                window.alert("user exist.")
+                console.log("history ::::::: ",history)
+                window.alert("user exist. ::::: ",history)
                //console.log("isOk ::::::: ",isOk);
                history.push("/home", { name: "Ansh" })
                 isUserFound= true

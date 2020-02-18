@@ -227,3 +227,30 @@
   #icon {
     width:20%;
   }
+
+  .home_container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://www.itl.cat/pngfile/big/0-9431_star-star-wars-planets-background.jpg");
+  }
+  .form-control{
+    width: 50vw !important;
+    margin-top: 60px !important;
+    
+  }
+  .btn{
+    margin-top: 60px !important;
+  }
+  .form-inline{
+    display: flex !important;
+    justify-content: center !important;
+    
+  }
+  .search-list {
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 22%;
+    width: 49.5%;
+     /* display:flex; */
+    justify-content: center;
+  }

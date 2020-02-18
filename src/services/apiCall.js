@@ -30,7 +30,7 @@ async function getPostApiCall(method) {
     console.log('request Data  :::: ',JSON.stringify(method.payload) + " " + method.method, method.type );
     
     if (method.method === "GET") {
-        let getUrl = method.type + "/" + method.payload
+        let getUrl = method.type + "/" + (method.payload!=undefined?method.payload:'')
         console.log("getUrl :::::: ",getUrl );
         let response = await fetch(getUrl)
         let responseJson = await response.json();

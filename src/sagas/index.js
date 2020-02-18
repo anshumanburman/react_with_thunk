@@ -1,5 +1,5 @@
 import {all,takeLatest} from 'redux-saga/effects';
-import {loginAction,otpVerifyAction,peopleListAction} from './saga';
+import {loginAction,otpVerifyAction,peopleListAction,planetsListAction} from './saga';
 import * as Utils from '../utility';
 
 
@@ -8,6 +8,9 @@ function* watchLoginAction(){
 }
 function* watchpeopleListAction(){
     yield takeLatest(Utils.ApiTypes.PEOPLE_LIST_METHOD, peopleListAction )
+}
+function* watchPlanetsListAction(){
+    yield takeLatest(Utils.ApiTypes.PLANETS_LIST_METHOD, planetsListAction )
 }
 
 
@@ -18,7 +21,8 @@ function* watchpeopleListAction(){
 function* rootSaga(){
     yield all([
           watchLoginAction(),
-          watchpeopleListAction()
+          watchpeopleListAction(),
+          watchPlanetsListAction()
          
     ])
 }

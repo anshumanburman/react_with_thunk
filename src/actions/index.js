@@ -11,6 +11,15 @@ export function peopleListAction(data) {
         //method:"GET"
     }
 }
+export function planetsListAction(data) {
+    console.log("planetsListAction :::: ",data);
+    
+    return {
+        type: Utils.ApiTypes.PLANETS_LIST_METHOD,
+        payload: data,
+        method:"GET"
+    }
+}
 
 export function loginAction(data) {
     return {
